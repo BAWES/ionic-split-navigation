@@ -2,18 +2,18 @@
 <ion-menu #menuLeft side="left" type="overlay" [content]="loggedInContent">
 
   <ion-header>
-    <ion-toolbar text-center style="height:auto;">
-      <img margin style='height:45px;' src="assets/brand/logo-dark.png" />
+    <ion-toolbar>
+      <ion-title>StudentHub</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
     <ion-list>
-      <ion-list-header>Personal</ion-list-header>
+      <ion-list-header>Navigation Header</ion-list-header>
 
-      <button ion-item (click)="loadMyActivityPage()">
+      <button ion-item (click)="contact()">
         <ion-icon name="ios-analytics" item-left></ion-icon>
-        My Activity
+        Contact Us
       </button>
     </ion-list>
   </ion-content>

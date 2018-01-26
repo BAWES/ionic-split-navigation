@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, NavParams, MenuController } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
+import { ContactPage } from '../contact/contact';
 
 @Component({
   selector: 'page-navigation',
@@ -11,11 +12,21 @@ export class NavigationPage {
 
   rootPage = HomePage;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  @ViewChild('loggedInContent') mainNav: NavController
+
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams, 
+    private _menu: MenuController
+  ) { }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NavigationPage');
+  }
+
+  contact(){
+    this._menu.close();
+    this.mainNav.push(ContactPage);
   }
 
 }
