@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, MenuController } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
+import { BuilderPage } from '../builder/builder';
 import { ContactPage } from '../contact/contact';
 
 @Component({
@@ -11,8 +12,10 @@ import { ContactPage } from '../contact/contact';
 export class NavigationPage {
 
   rootPage = HomePage;
+  secondaryPage = BuilderPage;
 
-  @ViewChild('loggedInContent') mainNav: NavController
+  @ViewChild('leftNavStack') mainNav: NavController
+  @ViewChild('rightNavStack') secondaryNav: NavController
 
   constructor(
     public navCtrl: NavController, 
