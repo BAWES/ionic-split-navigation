@@ -28,8 +28,8 @@
   <!-- Menu Right -->
   <ion-menu #menuRight side="right" type="overlay" [content]="loggedInContent">
     <ion-header>
-      <ion-toolbar text-center>
-        Right side menu
+      <ion-toolbar>
+        <ion-title>Profile Builder</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -47,8 +47,8 @@
     </ion-content>
 
     <ion-footer text-center>
-      <button ion-button clear (click)="removeAccount()" color="danger">
-        Remove Account
+      <button ion-button clear>
+        Footer Button
       </button>
     </ion-footer>
   </ion-menu>
