@@ -32,4 +32,9 @@ export class NavigationPage {
     this.mainNav.push(ContactPage);
   }
 
+  contact2(){
+    this._menu.close();
+    this.secondaryNav.push(ContactPage);
+  }
+
 }
