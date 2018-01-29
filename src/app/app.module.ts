@@ -10,6 +10,7 @@ import { NavigationPage } from '../pages/navigation/navigation';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { NavigationProxyProvider } from '../providers/navigation-proxy';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    NavigationProxyProvider
   ]
 })
 export class AppModule {}
